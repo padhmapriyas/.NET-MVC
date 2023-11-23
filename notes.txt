@@ -1,0 +1,60 @@
+SYNTAX:
+
+//Index
+create clustered index (index name)
+on tablename (column name)
+
+create NONclustered index (index name)
+on tablename (column name)
+------------------------
+//Trigger
+create trigger (triggername)
+On (Parenttable name)
+After [action]
+as
+Begin
+//select statement from tablename OR Action Statement
+where 
+End
+-------------------------
+//instead of trigger
+create trigger (triggername)
+on (table name)
+instead of [action]
+as
+Begin
+
+End
+---------------------------
+//VIEW:
+Sql view are a kind of virtual table that has rows and columns.
+we can create view by selecting fields from one or more tables or either have all rows of a table based on certain conditions.
+
+CREATE view viewname
+AS 
+select statement
+,joins...
+End
+--------------------------
+//FUNCTIONS
+Create functions [function name]
+(column datatype )
+return datatype 
+as
+Begin
+Set @result addition,subtraction,division
+return @result
+End
+-------------------------
+//CALL FUNCTIONS
+Create procedure [procedurename]
+as
+Begin
+select statement 
+where 
+
+END
+
+
+
+
