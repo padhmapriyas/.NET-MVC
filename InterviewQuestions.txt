@@ -1,0 +1,113 @@
+1) Difference Between DynamoDB and Mysql
+      
+              DynamoDB is a NoSQL database offered by Amazon Web Services (AWS). It stores data as key-value pairs in a schema-less way which allows for flexibility as there are no requirements for a fixed table schema. MySQL, on the other hand, is a relational database (RDBMS) that uses Structured Query Language (SQL).
+
+Example Dynamo db
+
+{
+    "id": "123",
+    "name": "John Doe",
+    "email": "john.doe@example.com"
+}
+Example Mysql
+
+CREATE TABLE Users (
+    id INT,
+    name VARCHAR(100),
+    email VARCHAR(100),
+    PRIMARY KEY (id)
+);
+
+2) Difference between function and stored procedure
+
+Following are the main differences between functions and procedures:
+Functions	Procedures
+A function has a return type and returns a value.	A procedure does not have a 
+return type. But it returns values 
+using the OUT parameters.
+You cannot use a function with Data Manipulation queries. Only Select queries are allowed in functions.	You can use DML queries such as insert, update, select etc… 
+with procedures.
+A function does not allow output parameters	A procedure allows both input 
+and output parameters.
+You cannot manage transactions inside a function.	You can manage transactions
+ inside a procedure.
+You cannot call stored procedures from a function	You can call a function from a 
+stored procedure.
+You can call a function using a select statement.	You cannot call a procedure 
+using select statements.
+
+
+3)What is Constructor and its type c#
+
+A constructor is a special method that is called when an object is created from a class. It is used to initialize the object's state and perform any necessary setup operations. Constructors have the same name as the class and do not have a return type.
+
+Types of constructor :
+
+●	Default Constructor
+●	Parameterized Constructor
+●	Copy Constructor
+●	Static Constructor
+●	Private Constructor 
+
+
+public class DefaultConstructorExample
+{
+    // Default constructor
+    public DefaultConstructorExample()
+    {
+        Console.WriteLine("Default constructor ");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        // Creating an object with the default constructor
+        DefaultConstructorExample obj = new DefaultConstructorExample();
+    }
+}
+
+Parameterized Constructor
+
+A parameterized constructor allows you to initialize the object with specific values at the time of creation.
+	
+	public class DefaultConstructorExample
+{
+    public DefaultConstructorExample(String Name)
+    {
+        Console.WriteLine(Name);
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+    
+        DefaultConstructorExample obj = new DefaultConstructorExample("dotnet");
+    }
+}
+
+
+Copy constructor:
+
+Static Constructor:
+
+Private Constructor:
+
+9)  session in .net:
+
+In C#, a session is typically associated with web applications and is used to store user-specific information across multiple requests. 
+The Session object is part of the System.Web namespace and is available in ASP.NET applications. 
+It provides a way to store and retrieve values on a per-user basis.12) mvc 
+
+	
+ 
+12) mvc 
+Model: Manages data and business logic.
+View: Handles the user interface and presentation.
+Controller: Acts as an intermediary, managing user input and updating the model and view accordingly.
+           used to implement user interfaces, data, and controlling logic.
+
+
