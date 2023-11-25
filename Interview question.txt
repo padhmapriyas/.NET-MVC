@@ -1,0 +1,267 @@
+1) Difference Between DynamoDB and Mysql
+      
+              DynamoDB is a NoSQL database offered by Amazon Web Services (AWS). It stores data as key-value pairs in a schema-less way which allows for flexibility as there are no requirements for a fixed table schema. 
+           MySQL, on the other hand, is a relational database (RDBMS) that uses Structured Query Language (SQL).
+
+Example Dynamo db
+
+{
+    "id": "123",
+    "name": "John Doe",
+    "email": "john.doe@example.com"
+}
+Example Mysql
+
+CREATE TABLE Users (
+    id INT,
+    name VARCHAR(100),
+    email VARCHAR(100),
+    PRIMARY KEY (id)
+);
+
+2) Difference between function and stored procedure
+
+stored procedure are pre-compiled objects which are compiled for the first time and its compiled format is saved ,which executes (compiled code)
+whenever it is called
+
+Function is compiled and executed every time whenever it is called.
+----
+try-catch block exceptions can be handled in a procedure.
+
+Whereas try-catch block cannot be used in a function
+---
+we cannot use transactions in function.
+we can use transactions in procedure (like:comit,begin,rollback).
+--
+function can be called from procedure.
+procedure cannot be called from function.
+---
+Function must return a value.
+
+In the stored procedure it can return zero or n values.
+---
+function can have input parameter
+
+procedure can have input or output parameters.
+---
+
+Function does not allow DML statements but only select statements.
+
+The procedure allows select as well as DML(insert/update/Delete) statements.
+
+
+
+
+3)What is Constructor and its type c#
+
+A constructor is a special method that is called when an object is created from a class. It is used to initialize the object's state and perform any necessary setup operations. Constructors have the same name as the class and do not have a return type.
+
+Types of constructor :
+
+Default Constructor
+Parameterized Constructor
+Copy Constructor
+Static Constructor
+Private Constructor 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Default Constructor 
+
+	
+
+public class MyClass
+{
+    // Default Constructor
+    public MyClass()
+    {
+        // Initialization code
+    }
+}
+
+
+Parameterized Constructor
+
+A parameterized constructor allows you to initialize the object with specific values at the time of creation.
+	
+public class MyClass
+{
+    // Parameterized Constructor
+    public MyClass(int value)
+    {
+        // Initialization code with parameter
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copy constructor:
+A copy constructor creates a new object by copying the values of another object of the same class.
+
+public class MyClass
+{
+    // Copy Constructor
+    public MyClass(MyClass original)
+    {
+        // Copy values from original object
+    }
+}
+
+
+
+Static Constructor
+
+         A static constructor is used to initialize any static data or perform a one-time setup for a class. It doesn't take any parameters.
+          A static constructor is called only once when the class is loaded into memory. It's used for initializing static members of the class.
+
+StaticConstructorExample.
+
+public class MyClass
+{
+    // Static Constructor
+    static MyClass()
+    {
+        // Initialization code for static members
+    }
+}
+
+
+
+
+Private Constructor:
+
+A private constructor is a constructor with private access, which means it can only be called from within the same class.
+
+public class MyClass
+{
+    // Private Constructor
+    private MyClass()
+    {
+        // Initialization code
+    }
+}
+
+
+5)What is garbage collector in c#
+
+         The garbage collector (GC) is a component of the .NET runtime that manages the automatic memory allocation and deallocation for your application. Its primary purpose is to automatically reclaim memory that is no longer in use by the program, preventing memory leaks and simplifying memory management for developers.
+
+6)What is tuple?
+
+A tuple is a lightweight data structure that allows you to group together a fixed number of elements of potentially different types. Tuples are often used for temporary and simple data 
+
+ SAMPLE CODE:
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Creating a tuple with three elements
+        var person = Tuple.Create("John", 25, "Developer");
+
+        // Accessing tuple elements
+        Console.WriteLine($"Name: {person.Item1}, Age: {person.Item2}, Occupation: {person.Item3}");
+    }
+}
+
+1] UN-NAMED TUPLE
+class Program
+{
+    static void Main()
+    {
+        // Creating a tuple with three elements
+       var person = ("John", 25, "Developer");
+Console.WriteLine($"Name: {person.Item1}, Age: {person.Item2}, Occupation: {person.Item3}");
+
+    }
+}
+
+2] NAMED TUPLE:
+class Program
+{
+    static void Main()
+    {
+        // Creating a tuple with three elements
+ var person = (Name: "John", Age: 25, Occupation: "Developer");
+Console.WriteLine($"Name: {person.Name}, Age: {person.Age}, Occupation: {person.Occupation}");
+    }   }
+
+
+Here the $ symbol is not necessary , it is used here for interpolated strings.
+You can write as:
+ Console.WriteLine("Name: " + person.Name + ", Age: " + person.Age + ", Occupation: " + person.Occupation);
+
+
+
+
+
+
+
+
+8) memory management in c#
+
+	manages memory in two distinct regions: the stack and the heap. The stack is used for storing value types, method parameters, and local variables, while the heap is used for storing reference types (objects). The garbage collector is responsible for managing memory in the heap.
+
+
+9)  session in .net
+	
+	A session is a state where user values are retrieved and kept on the webpage. It is used to pass data from one page to another in ASP.NET. A website session allows users to interact with the application and perform operations such as reading and writing on it.
+
+
+
+10) Difference between sql and  nosql
+
+SQL databases are relational, and NoSQL databases are non-relational. SQL databases use structured query language (SQL) and have a predefined schema. NoSQL databases have dynamic schemas for unstructured data. SQL databases are vertically scalable, while NoSQL databases are horizontally scalable.
+
+11) What is connection pooling?
+	Database connection pooling is a way to reduce the cost of opening and closing connections by maintaining a “pool” of open connections that can be passed from database operation to database operation as needed.
+
+
+
+12) mvc 
+
+	
+
+13)JIT?
+
+Just-In-Time (JIT) compilation is like a translator for our code. Instead of translating the entire code before running it, JIT does it just before we use it. 
+It's like having a translator who knows the local language just before you speak, so you can communicate effectively without learning all the languages in advance.
+
+Types:
+1] Normal Jit
+2] Econo Jit
+3] Pre-Jit
+
+14]Garbage Collection?
+
+Garbage collection (GC) is a memory recovery feature built into programming languages such as C# and Java. A GC-enabled programming language includes one or more garbage collectors (GC engines) that automatically free up memory space that has been allocated to objects no longer needed by the program. The reclaimed memory space can then be used for future object allocations within that program.
+
+15] Memory Management?
+
+Memory management is the process of controlling and coordinating a computer's main memory. It ensures that blocks of memory space are properly managed and allocated so the operating system (OS), applications and other running processes have the memory they need to carry out their operations.
+
+What is the method of memory management?
+Paging, and swapping, segmentation and compaction are modern computers' four main memory management techniques. Swapping is the best technique for memory management because it provides the most efficient use of system resources.
+
